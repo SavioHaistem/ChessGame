@@ -1,4 +1,4 @@
-package BoardGame;
+package boardgame;
 
 public class Board {
     private Integer rows;
@@ -25,5 +25,13 @@ public class Board {
 
     public void setRows(Integer rows) {
         this.rows = rows;
+    }
+
+    public Piece piece(int row, int column) {
+        return pieces[row][column];
+    }
+
+    public Piece piece(Position position) {
+        return pieces[position.getRow()][position.getColumn()];
     }
 }
